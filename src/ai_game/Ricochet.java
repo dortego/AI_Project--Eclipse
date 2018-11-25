@@ -16,11 +16,11 @@ public class Ricochet extends GameObject{
 
     r = new SecureRandom();
 
-    velX = 1f + r.nextFloat();
-    velY = 1f + r.nextFloat();
+    velX = 1f + r.nextFloat() * 2;
+    velY = 1f + r.nextFloat() * 2;
 
-    // velX = 1f;
-    // velY = 2f;
+//     velX = 1f;
+//     velY = 2f;
   }
 
   @Override
@@ -37,10 +37,24 @@ public class Ricochet extends GameObject{
     x += velX;
     y += velY;
 
-    if (x <= 0 || x >= Game.WIDTH - 20)
-      velX = -velX;
-    if (y <= 0 || y >= Game.HEIGHT - 32)
-      velY = -velY;
+    if (x >= Game.WIDTH - 20) {
+    	  velX = -1 * (1f + r.nextFloat() * 2);
+//      velX = -velX;
+      System.out.println("velX: " + velX);
+    }
+    if (x <= 0) {
+      velX = 1f + r.nextFloat() * 2;
+      System.out.println("velX: " + velX);
+    }
+    if (y >= Game.HEIGHT - 32) {
+      velY = -1 * (1f + r.nextFloat() * 2);
+//      velY = -velY;
+      System.out.println("velY: " + velY);
+    }
+    if (y <= 0) {
+      velY = 1f + r.nextFloat() * 2;
+      System.out.println("velY: " + velY);
+    }
 
     handler.addObject(new Trail(x, y, ID.Trail, Color.RED, 16, 16, 0.07f, handler));
   }
