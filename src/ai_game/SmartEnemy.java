@@ -45,12 +45,7 @@ public class SmartEnemy extends GameObject {
     
     velX = ((-1 / distance) * diffX) ;
     velY = ((-1 / distance) * diffY) ;
-    
-//    if (x <= 0 || x >= Game.WIDTH - 32)
-//      velX = -velX;
-//    if (y <= 0 || y >= Game.HEIGHT - 32)
-//      velY = -velY;
-    
+
     handler.addObject(new Trail(x, y, ID.Trail, Color.green, 32, 32, 0.02f, handler));
   }
 
@@ -63,6 +58,5 @@ public class SmartEnemy extends GameObject {
     
     g.setColor(Color.green);
     g.fillOval((int)x, (int)y, 32, 32);
-//    g.fillRect((int)x, (int)y, 32, 32);
   }
 }

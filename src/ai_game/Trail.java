@@ -9,7 +9,6 @@ public class Trail extends GameObject {
   private Color color;
   private float width, height;
   private float life;
-  // life = 0.001 to 0.1
   
   public Trail(float x, float y, ID id, Color color, int width, int height, float life, Handler handler) {
     super(x, y, id);
@@ -34,7 +33,6 @@ public class Trail extends GameObject {
     
     g.setColor(color);
     g.fillOval((int)x, (int)y, (int)width, (int)height);
-//    g.fillRect((int)x, (int)y, (int)width, (int)height);
 
     g2d.setComposite(makeTransparent(1));
   }

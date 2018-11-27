@@ -241,6 +241,5 @@ public class Player extends GameObject {
 
     g.setColor(color);
     g.fillOval((int) x,(int) y, 48, 48);
-//    g.fillRect((int) x,(int) y, 48, 48);
   }
 }

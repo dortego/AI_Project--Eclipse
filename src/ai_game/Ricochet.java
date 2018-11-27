@@ -30,6 +30,8 @@ public class Ricochet extends GameObject{
     return new Rectangle((int)x-45, (int)y-45, 100, 100);
 //    return new Rectangle((int)x, (int)y, 16, 16);
 //    return new Rectangle((int)x-8, (int)y-8, 32, 32);
+//    return new Rectangle((int) x-16, (int) y-16, 48, 48);
+
   }
 
   @Override
@@ -69,6 +71,5 @@ public class Ricochet extends GameObject{
 
     g.setColor(Color.RED);
     g.fillOval((int)x, (int)y, 16, 16);
-//    g.fillRect((int)x, (int)y, 16, 16);
   }
 }
